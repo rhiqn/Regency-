@@ -1,0 +1,123 @@
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Regency Era in Britain</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+    }
+    
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      cursor: pointer;
+    }
+    
+    nav {
+      background-color: #555;
+      padding: 10px;
+    }
+    
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+    
+    nav ul li {
+      display: inline;
+    }
+    
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 20px;
+    }
+    
+    main {
+      padding: 20px;
+    }
+    
+    h1 {
+      color: #333;
+      cursor: pointer;
+    }
+    
+    img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 20px;
+    }
+    
+    .content {
+      display: none;
+    }
+  </style>
+  <script>
+    function toggleContent(id) {
+      var content = document.getElementById(id);
+      if (content.style.display === "none") {
+        content.style.display = "block";
+      } else {
+        content.style.display = "none";
+      }
+    }
+  </script>
+</head>
+<body>
+  <header onclick="toggleContent('home')">
+    <h1>Regency Era in Britain</h1>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="javascript:void(0);" onclick="toggleContent('home')">Home</a></li>
+      <li><a href="javascript:void(0);" onclick="toggleContent('fashion')">Fashion</a></li>
+      <li><a href="javascript:void(0);" onclick="toggleContent('literature')">Literature</a></li>
+      <li><a href="javascript:void(0);" onclick="toggleContent('architecture')">Architecture</a></li>
+    </ul>
+  </nav>
+  
+  <!-- Home Page -->
+  <main id="home" class="content">
+    <h1 onclick="toggleContent('home')">Welcome to the Regency Era in Britain</h1>
+    <p>The Regency Era in Britain spanned from 1811 to 1820 when King George III was deemed unfit to rule and his son, the future King George IV, became the Prince Regent. This period was marked by significant social, cultural, and political changes.</p>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/4/45/George_IV%2C_Prince_of_Wales%2C_1803_by_G._Stuart.jpg" alt="George IV, Prince Regent" />
+    <p>Image source: <a href="https://en.wikipedia.org/wiki/File:George_IV,_Prince_of_Wales,_1803_by_G._Stuart.jpg">Wikipedia</a></p>
+  </main>
+  
+  <!-- Fashion Page -->
+  <main id="fashion" class="content">
+    <h1 onclick="toggleContent('fashion')">Regency Era Fashion</h1>
+    <p>Regency fashion was characterized by classical influences, simplicity, and elegance. Women's fashion featured high-waisted dresses, empire silhouettes, and delicate fabrics like muslin and silk. Men's fashion included tailcoats, waistcoats, and breeches.</p>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/5/56/Regency_Era_-_Fashion_Plate_%281801%E2%80%931810%29.jpg" alt="Regency Era Fashion" />
+    <p>Image source: <a href="https://en.wikipedia.org/wiki/File:Regency_Era_-_Fashion_Plate_(1801%E2%80%931810).jpg">Wikipedia</a></p>
+  </main>
+  
+  <!-- Literature Page -->
+  <main id="literature" class="content">
+    <h1 onclick="toggleContent('literature')">Literature of the Regency Era</h1>
+    <p>The Regency Era witnessed a flourishing of literature. It was a time of great literary achievements with notable authors such as Jane Austen, whose works like "Pride and Prejudice" and "Sense and Sensibility" are still celebrated today.</p>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/c/cc/CassandraAusten-JaneAusten%28c.1810%29_hires.jpg" alt="Jane Austen" />
+    <p>Image source: <a href="https://en.wikipedia.org/wiki/File:CassandraAusten-JaneAusten(c.1810)_hires.jpg">Wikipedia</a></p>
+  </main>
+  
+  <!-- Architecture Page -->
+  <main id="architecture" class="content">
+    <h1 onclick="toggleContent('architecture')">Regency Era Architecture</h1>
+    <p>Regency architecture showcased a shift towards neoclassical styles, influenced by ancient Greek and Roman designs. Prominent examples include John Nash's work, such as the Royal Pavilion in Brighton, known for its exotic and lavish appearance.</p>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Brighton_Royal_Pavilion.jpg" alt="Royal Pavilion, Brighton" />
+    <p>Image source: <a href="https://en.wikipedia.org/wiki/File:Brighton_Royal_Pavilion.jpg">Wikipedia</a></p>
+  </main>
+
+  <script>
+    // Add initial visibility state
+    document.getElementById('home').style.display = "block";
+  </script>
+</body>
+</html>
